@@ -1,0 +1,32 @@
+main: main.o shapes.o circle.o triangle.o rectangle.o square.o
+	g++ main.o shapes.o triangle.o rectangle.o square.o circle.o -o main
+main.o: main.cpp
+	g++ -c main.cpp
+shapes.o: shapes.cpp shapes.h
+	g++ -c shapes.cpp
+circle.o: circle.cpp circle.h
+	g++ -c circle.cpp
+triangle.o: triangle.cpp triangle.h
+	g++ -c triangle.cpp
+rectangle.o: rectangle.cpp rectangle.h
+	g++ -c rectangle.cpp
+square.o: square.cpp square.h
+	g++ -c square.cpp
+clean:
+	rm *.o main *.h.gch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
